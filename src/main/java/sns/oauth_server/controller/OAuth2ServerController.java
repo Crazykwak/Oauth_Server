@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import sns.oauth_server.entity.OAuth2Server;
+import sns.oauth_server.entity.Role;
 import sns.oauth_server.entity.dto.OAuth2ResponseDto;
 import sns.oauth_server.entity.dto.OAuthRequestDto;
 import sns.oauth_server.mapper.OAuth2ServerMapper;
@@ -23,6 +24,7 @@ public class OAuth2ServerController {
     @GetMapping("/request_api_url")
     public String viewRequestApiUrl(Model model) {
         model.addAttribute(new OAuthRequestDto());
+        model.addAttribute("roles", Role.values());
         return "oauth";
     }
 

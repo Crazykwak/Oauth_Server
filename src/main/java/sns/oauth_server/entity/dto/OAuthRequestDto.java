@@ -11,7 +11,7 @@ import sns.oauth_server.entity.Role;
 public class OAuthRequestDto {
 
     private String url;
-    private String userId;
+    private String email;
     private Role role;
 
 

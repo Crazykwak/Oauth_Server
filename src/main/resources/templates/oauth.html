@@ -11,7 +11,7 @@
 
 
 <h1>API 신청</h1>
-<from action="/request_api_url" th:method="post" th:object="${OAuthRequestDto}">
+<form action="/request_api_url" th:method="post" th:object="${OAuthRequestDto}">
   <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
     <input th:field="*{email}" type="email" class="form-control" id="email" placeholder="name@example.com">
@@ -26,7 +26,7 @@
   </select>
   <p><small>BASIC : 이메일, 유저네임</small></p>
   <input type="submit" value="제출">
-</from>
+</form>
 
 
 

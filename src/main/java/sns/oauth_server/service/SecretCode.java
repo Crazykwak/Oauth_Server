@@ -15,10 +15,10 @@ public class SecretCode {
     public String generateSecretCode() {
         UUID uuid = UUID.randomUUID();
         log.info("생성된 uuid = {}", uuid.toString());
-        return transTo10UUID(uuid.toString());
+        return uuidLengthChangeToShoter(uuid.toString());
     }
 
-    private String transTo10UUID(String uuid) {
+    private String uuidLengthChangeToShoter(String uuid) {
         long tmp = ByteBuffer.wrap(uuid.getBytes()).getLong();
         return Long.toString(tmp, 32);
     }
